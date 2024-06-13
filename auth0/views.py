@@ -1,11 +1,5 @@
-from rest_framework import status, viewsets, parsers, renderers
+from rest_framework import status, viewsets
 from rest_framework.response import Response
-from rest_framework.decorators import action
-from django.contrib.auth.tokens import default_token_generator
-from django.core.mail import send_mail, EmailMessage
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-from django.utils.encoding import force_bytes, force_str
-from django.views.generic import View
 
 
 

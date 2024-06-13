@@ -31,6 +31,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("auth/", include("auth0.urls")),
     path("user/", include("user.urls")),
+    path("job/", include("job.urls")),
     # Optional UI:
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
     path("", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"),
