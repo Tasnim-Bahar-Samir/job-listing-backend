@@ -3,7 +3,8 @@ from rest_framework.permissions import BasePermission
 
 class IsCompany(BasePermission):
     def has_permission(self, request, view):
-        have_companyAccess = request.user.user_profile.group.all().filter(name="company").exists()
+        print(request.user.user_profile.group,666)
+        have_companyAccess = request.user.user_profile.group == 'COMPANY'
 
         if have_companyAccess:
             return True
@@ -13,7 +14,7 @@ class IsCompany(BasePermission):
 
 class IsCandidate(BasePermission):
     def has_permission(self, request, view):
-        haveCandidateAccess = request.user.user_profile.group.all().filter(name="candidate").exists()
+        haveCandidateAccess = request.user.user_profile.group == "CANDIDATE"
 
         if haveCandidateAccess:
             return True

@@ -5,6 +5,7 @@ from . import views
 # /user/
 router = DefaultRouter()
 router.register('profile', views.UserProfileView, basename='profile')
+router.register('saved-job', views.SavedJobView, basename='saved-job')
 
 
 urlpatterns = [

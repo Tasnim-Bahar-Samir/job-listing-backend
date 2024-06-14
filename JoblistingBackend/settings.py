@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     "dj_rest_auth",
     "corsheaders",
-    'django.contrib.sites',
+    # 'django.contrib.sites',
     #utils
     "drf_spectacular",
     "drf_spectacular_sidecar",
@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     #apps
     "auth0",
     "user",
-    "job"
+    "job",
 ]
 
 MIDDLEWARE = [

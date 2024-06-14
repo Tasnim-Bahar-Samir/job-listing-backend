@@ -40,15 +40,6 @@ To run this project, you will need to add the following environment variables to
 
 `CORS_ALLOWED_ORIGINS`
 
-### Database
-
-`DB_NAME`
-
-`DB_USER`
-
-`DB_PASSWORD`
-
-`DB_HOST`
 
 
 ## Run Shell
@@ -61,36 +52,3 @@ python manage.py shell
 ```sh
 exec(open('shell.py').read())
 ```
-
-## Setup Social Auth
-
-- Strp 1: Set site ID
-![Screenshot](./_data/img/add_sites.png)
-for example
-1. localhost:3000
-
-- Strp 2: Add Socialapp
-![Screenshot](./_data/img/add_social_app.png)
-You have to same perform for each social application
-
-### Google
-- Step 3: Configuration
-The "Authorized redirect URIs" used when creating the credentials must include your full domain and end in the callback path.
-
-For production example: 
-1. https://{YOUR_DOMAIN}/api/auth/callback/google
-2. https://{YOUR_DOMAIN}/api/calender/google
-
-For development example: 
-1. http://localhost:3000/api/auth/callback/google
-2. http://localhost:3000/api/calender/google
-
-For more details: https://next-auth.js.org/providers/google#configuration
-
-### Facebook
-- Step 3: Configuration
-The "Authorized redirect URIs" used when creating the credentials must include your full domain and end in the callback path.
-1. https://{YOUR_DOMAIN}/api/auth/callback/facebook
-
-For more details: https://next-auth.js.org/providers/facebook
-

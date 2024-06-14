@@ -2,6 +2,7 @@ from django.contrib import admin
 
 # model
 from .models import RegisterUser, Profile
+from job.models import SavedJob
 
 
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
@@ -26,8 +27,15 @@ admin.site.register(RegisterUser, RegisterUserAdmin)
 
 
 class ProfileAdmin(admin.ModelAdmin):
-    search_fields = ["id", "user"]
-    list_display = ["user"]
+    search_fields = ["id", "user","group"]
+    list_display = ["user","group"]
 
 
 admin.site.register(Profile, ProfileAdmin)
+
+class SavedJobAdmin(admin.ModelAdmin):
+    search_fields = ["id", ]
+    list_display = ("id", "user", "job")
+
+
+admin.site.register(SavedJob, SavedJobAdmin)

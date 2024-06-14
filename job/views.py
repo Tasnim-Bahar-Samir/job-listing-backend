@@ -43,11 +43,11 @@ class JobView(viewsets.GenericViewSet):
 
     filterset_fields = {
         "title": ["exact", "in"],
+        "user__id": ["exact", "in"],
         "type": ["exact", "in"],
-        "meta_title": ["exact", "in"],
     }
-    search_fields = ["title",'meta_title']
-    ordering_fields = ["title","meta_title", "created_at"]
+    search_fields = ["title","user"]
+    ordering_fields = ["title","created_at"]
 
     schema = AutoSchema()
 
